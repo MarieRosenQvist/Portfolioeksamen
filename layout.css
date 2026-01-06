@@ -1,0 +1,66 @@
+/************Forisde********/
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+}
+
+.logo {
+  width: 80px;
+  height: auto;
+}
+
+.nav {
+  display: none;
+}
+
+.burger {
+  font-size: 2rem;
+  cursor: pointer;
+}
+@media (min-width: 768px) {
+  .nav {
+    display: block;
+  }
+
+  .nav ul {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .burger {
+    display: none;
+  }
+}
+@media (min-width: 768px) {
+  .hero h1 {
+    font-size: 3rem;
+  }
+
+  .hero h2 {
+    font-size: 1.3rem;
+  }
+}
+/****** Forside – projekter layout ******/
+
+.projects-preview {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  padding: 3rem 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Desktop layout */
+@media (min-width: 768px) {
+  .projects-preview {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+

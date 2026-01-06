@@ -1,0 +1,376 @@
+/*************** Reset *********************/
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+img {
+width: 100%;
+height: auto;
+display: block;
+
+@media (min-width: 768px) {
+  nav {
+    display: block;
+  }
+
+  .burger {
+    display: none;
+  }
+}
+}
+/******Forside tekst og farve******/
+.hero h2 {
+  color: #262626;
+  font-size: 1.1rem;
+  font-weight: normal;
+  max-width: 500px;
+}
+.hero {
+  min-height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 2rem;
+}
+.hero h1 {
+  color: #BF0404;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+
+/******Header farve******/
+.nav a {
+  text-decoration: none;
+  color: #BF0404;
+}
+.nav a:hover {
+  opacity: 0.7;
+  color: black;
+}
+
+
+/*******Footer**********/
+footer {
+  background-color: #c43333;  /* Lys baggrund */
+  padding: 30px 20px;
+  text-align: center;
+  font-family: 'Arial', sans-serif;
+  color: #ffffff;
+}
+
+footer .footer-top {
+  margin-bottom: 20px;
+}
+
+
+footer .footer-bottom p {
+  margin: 5px 0;
+  font-size: 14px;
+  color: #ffffff;
+}
+
+
+/*********Projekt1***************/
+.projekt-hero {
+  padding: 80px 10%;
+  text-align: center;
+}
+
+.projekt-link {
+  display: inline-block;
+  margin-top: 20px;
+  color: #BF0404;
+  text-decoration: none;
+}
+
+.projekt-info {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+  padding: 60px 10%;
+  background-color: #c43333;
+  color: #ffffff;
+}
+
+.projekt-visualer {
+  padding: 60px 10%;
+}
+
+.billede-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.billede-grid img {
+  width: 100%;
+  height: auto;
+}
+
+.projekt-tekst {
+  padding: 60px 10%;
+  max-width: 800px;
+}
+
+/****** Projekt-preview styling ******/
+
+.project-card a {
+  text-decoration: none;
+  color: #262626;
+}
+
+.project-card img {
+  border-radius: 6px;
+  margin-bottom: 0.8rem;
+}
+
+.project-card h3 {
+  color: #BF0404;
+  margin-bottom: 0.4rem;
+}
+
+.project-card p {
+  font-size: 0.9rem;
+}
+.project-card {
+  transition: transform 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-4px);
+}
+
+/********Projekterside*******/
+.projects-intro {
+  margin-bottom: 4rem;
+  text-align: center;
+}
+
+.projects-intro h1 {
+  margin-bottom: 1.5rem;   /* mere luft */
+  opacity: 0;
+  filter: blur(4px);
+  animation: fadeClear 1s ease forwards;
+}
+
+.projects-intro p {
+  max-width: 600px;
+  opacity: 0;
+  filter: blur(4px);
+  animation: fadeClear 1s ease forwards;
+  animation-delay: 0.4s;
+  margin: 0 auto;
+}
+
+/* NY animation */
+@keyframes fadeClear {
+  to {
+    opacity: 1;
+    filter: blur(0);
+  }
+}
+
+
+/* Grid med billeder */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Flere kolonner der passer til skærm */
+  gap: 30px;
+}
+
+/* Enkel projekt-box */
+.project-item {
+  text-decoration: none;
+  color: #333;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-item img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-item:hover img {
+  transform: scale(1.05);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+.project-item h3 {
+  margin-top: 10px;
+  font-size: 18px;
+  color: #ff3366; /* Kan skiftes til din accentfarve */
+}
+.project-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.project-item img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+/***********OMMIG************/
+
+
+.about-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 4rem 2rem;
+}
+
+/* GRID */
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: center;
+}
+
+/* BILLEDE */
+.about-image {
+  overflow: hidden;
+  border-radius: 12px;
+}
+
+.about-image img {
+  width: 100%;
+  display: block;
+  transition: transform 0.6s ease, filter 0.6s ease;
+}
+
+/* NY HOVER-EFFEKT (rolig & eksamensvenlig) */
+.about-image:hover img {
+  transform: scale(1.05) translateY(-5px);
+  filter: grayscale(40%);
+}
+
+/* TEKST */
+.about-text h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.about-text h2 {
+  margin-top: 1.5rem;
+  font-size: 1.2rem;
+  letter-spacing: 1px;
+}
+
+.about-text p {
+  line-height: 1.6;
+  margin-top: 0.5rem;
+}
+
+/* SOCIALE LINKS */
+.social-links {
+  margin-top: 6rem;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  a:hover {
+  opacity: 0.7;
+  color: rgb(195, 31, 31);
+}
+}
+
+.social-links a {
+  text-decoration: none;
+  color: #222;
+  border-bottom: 1px solid transparent;
+  transition: border 0.3s ease;
+}
+
+.social-links a:hover {
+  border-bottom: 1px solid #222;
+}
+
+@media (max-width: 768px) {
+
+  .about-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .about-container {
+    padding: 2rem 1.5rem;
+  }
+
+  .about-text h1 {
+    font-size: 2rem;
+  }
+
+  .social-links {
+    flex-direction: column;
+    gap: 1rem;
+  }
+}
+.about-image img {
+  border-radius: 12px;
+}
+
+
+/*******Forside tekst effekt*******/
+.hero-title {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeUp 1s ease forwards;
+}
+
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.hero-title {
+  animation-delay: 0.3s;
+}
+
+
+
+.hero-subtitle {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeUp 1s ease forwards;
+  animation-delay: 0.4s;
+}
+
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.hero-subtitle {
+  font-weight: 300;
+  opacity: 0.8;
+}
+
+/*********Video*******/
+.project-video {
+  margin-top: 6rem;
+  text-align: center;
+}
+
+.project-video video {
+  width: 100%;
+  max-width: 800px;
+  border-radius: 12px;
+}
+
+
+
+
+
+
+
+
+
