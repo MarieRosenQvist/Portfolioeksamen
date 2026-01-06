@@ -1,0 +1,96 @@
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* BODY */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f5f5f5;
+  color: #111;
+  line-height: 1.6;
+}
+
+/* WRAPPER */
+.project {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+/* INTRO */
+.intro {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.intro h1 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.intro p {
+  max-width: 650px;
+  margin: 0 auto 15px;
+}
+
+.project-link {
+  display: inline-block;
+  margin-top: 25px;
+  padding: 12px 26px;
+  background-color: black;
+  color: white;
+  text-decoration: none;
+  border-radius: 25px;
+}
+
+/* GRID – MOBIL */
+.content-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 30px;
+}
+
+/* CONTENT ITEM */
+.content-item {
+  background-color: white;
+  padding: 20px;
+  border-radius: 16px;
+  text-align: center;
+}
+
+/* BILLEDER */
+.content-item img {
+  width: 100%;
+  max-width: 260px;
+  height: auto;
+  margin: 15px 0;
+  border-radius: 12px;
+}
+
+/* TEKST */
+.content-item h2 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+.content-item p {
+  font-size: 0.95rem;
+  color: #444;
+}
+
+/* TABLET */
+@media (min-width: 700px) {
+  .content-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* DESKTOP */
+@media (min-width: 1000px) {
+  .content-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
