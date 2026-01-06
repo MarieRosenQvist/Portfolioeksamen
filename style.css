@@ -366,6 +366,253 @@ footer .footer-bottom p {
   border-radius: 12px;
 }
 
+.tema-section {
+  max-width: 800px;
+  margin: 0 auto 5rem auto;
+  text-align: center;
+}
+
+.tema-section h2 {
+  margin-bottom: 1.2rem;
+  font-size: 1.4rem;
+}
+
+.tema-section p {
+  line-height: 1.6;
+  margin-top: 1rem;
+}
+.tema-section img {
+  width: 100%;
+  border-radius: 12px;
+  margin-top: 1.5rem;
+  transition: 
+    transform 0.6s ease,
+    filter 0.6s ease;
+  filter: brightness(90%) contrast(95%);
+}
+
+.tema-section img:hover {
+  transform: scale(1.03);
+  filter: brightness(100%) contrast(100%);
+}
+.doc-link {
+  display: inline-block;
+  margin-top: 1.5rem;
+  color: #222;
+  text-decoration: none;
+  position: relative;
+}
+
+.doc-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 0;
+  height: 1px;
+  background-color: #222;
+  transition: width 0.4s ease;
+}
+
+.doc-link:hover::after {
+  width: 100%;
+}
+
+
+/***********Projekt5********/
+/* GENERELT */
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+  background-color: #fefefe;
+  color: #222;
+}
+
+/* TEMA 6 SEKTIONSSTYLING */
+.tema-section {
+  max-width: 800px;
+  margin: 0 auto 5rem auto;
+  text-align: center; /* CENTRER ALT INDHOLD */
+  padding: 0 1rem;
+}
+
+.tema-section h1,
+.tema-section h2 {
+  text-align: center;
+  margin-bottom: 1.2rem;
+}
+
+.tema-section p {
+  margin-top: 1rem;
+}
+
+/* BILLEDE-HOVER EFFEKT */
+.tema-section img {
+  width: 100%;
+  border-radius: 12px;
+  margin-top: 1.5rem;
+  transition: transform 0.6s ease, filter 0.6s ease;
+  filter: brightness(90%) contrast(95%);
+}
+
+.tema-section img:hover {
+  transform: scale(1.03);
+  filter: brightness(100%) contrast(100%);
+}
+
+/* LINK UNDERLINE-ANIMATION */
+.doc-link {
+  display: inline-block;
+  margin-top: 1.5rem;
+  color: #222;
+  text-decoration: none;
+  position: relative;
+}
+
+.doc-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 0;
+  height: 1px;
+  background-color: #222;
+  transition: width 0.4s ease;
+}
+
+.doc-link:hover::after {
+  width: 100%;
+}
+
+
+/* MOBIL-RESPONSIVE */
+@media (max-width: 768px) {
+  .tema-section h2 {
+    font-size: 1.2rem;
+  }
+
+  .tema-section p {
+    font-size: 0.95rem;
+  }
+}
+
+
+/* BASIS */
+body {
+  font-family: 'Arial', sans-serif;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+  background-color: #fefefe;
+  color: #222;
+}
+
+/* TEMA 5 SEKTIONER MED BAGGRUNDSFARVE STRIPE */
+.tema-section {
+  max-width: 800px;
+  margin: 0 auto 5rem auto;
+  padding: 2rem 1rem;
+  text-align: center;
+  border-left: 6px solid #BF0404; /* ny visuel stripe til Tema 5 */
+  background-color: #f9f9f9;
+  border-radius: 8px;
+}
+
+/* OVERSKRIFTER */
+.tema-section h1, .tema-section h2 {
+  margin-bottom: 1rem;
+  text-align: center;
+  font-family: 'Verdana', sans-serif;
+}
+
+/* BILLEDE HOVER – ROTATION + SHADOW */
+.tema-section img {
+  width: 100%;
+  border-radius: 12px;
+  margin-top: 1.5rem;
+  transition: transform 0.6s ease, box-shadow 0.6s ease;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.tema-section img:hover {
+  transform: rotate(-2deg) scale(1.03);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+/* BEFORE / AFTER FLEX MED BORDER OG SHADOW */
+.before-after-container {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 1.5rem;
+}
+
+.before-after-container .before,
+.before-after-container .after {
+  flex: 1 1 300px;
+  text-align: center;
+}
+
+.before-after-container img {
+  width: 100%;
+  border-radius: 12px;
+  border: 2px solid #BF0404;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  transition: transform 0.5s ease, box-shadow 0.5s ease;
+}
+
+.before-after-container img:hover {
+  transform: rotate(1deg) scale(1.02);
+  box-shadow: 0 8px 15px rgba(0,0,0,0.2);
+}
+
+/* LINK UNDERLINE EFFEKT (NY STYLE) */
+.doc-link {
+  display: inline-block;
+  margin-top: 1rem;
+  color: #BF0404;
+  text-decoration: none;
+  font-weight: bold;
+  position: relative;
+}
+
+.doc-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 0;
+  height: 2px;
+  background-color: #BF0404;
+  transition: width 0.3s ease;
+}
+
+.doc-link:hover::after {
+  width: 100%;
+}
+
+/* FADE-IN MED ROTATION */
+
+
+/* MOBILRESPONSIVE */
+@media (max-width: 768px) {
+  .before-after-container {
+    flex-direction: column;
+  }
+  .tema-section h2 {
+    font-size: 1.2rem;
+  }
+  .tema-section p {
+    font-size: 0.95rem;
+  }
+}
+
+
+
+
 
 
 
