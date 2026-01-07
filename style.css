@@ -46,6 +46,7 @@ display: block;
 .nav a {
   text-decoration: none;
   color: #BF0404;
+
 }
 .nav a:hover {
   opacity: 0.7;
@@ -79,39 +80,43 @@ footer .footer-bottom p {
 
 .project1-intro {
   text-align: center;
-  margin-bottom: 60px;
+  margin-bottom: 40px;
 }
 
-.project1-intro h1 {
+.project-intro h1 {
   font-size: 2rem;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 
-.project1-intro p {
-  max-width: 650px;
-  margin: 0 auto 25px;
+.project-intro h2 {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+  font-weight: normal;
 }
 
-.project1-link {
+.doc-link {
   display: inline-block;
-  padding: 12px 26px;
-  background-color: rgb(197, 44, 44);
+  padding: 12px 25px;
+  background-color: white;
   color: white;
-  text-decoration: none;
   border-radius: 25px;
-  transition: background-color 0.3s;
+  text-decoration: none;
+  margin-top: 10px;
+  transition: 0.3s;
 }
 
-.project1-link:hover {
-  background-color: #333;
+.doc-link:hover {
+  background-color: white;
 }
 
 
 .project1-grid {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 30px;
+  gap: 20px;
   justify-items: center;
+  margin-top: 40px;
+  text-align: center;
 }
 
 
@@ -125,9 +130,9 @@ footer .footer-bottom p {
   transition: transform 0.3s, box-shadow 0.3s;
 }
 
-.project1-item:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 12px 25px rgba(0,0,0,0.15);
+.project-card p {
+  font-size: 1rem;
+  line-height: 1.4;
 }
 
 .project1-item img {
@@ -151,11 +156,12 @@ footer .footer-bottom p {
 .project1-item h2 {
   font-size: 1.2rem;
   margin-bottom: 10px;
+  transition: transform 0.3s, box-shadow 0.3s;
 }
 
-.project1-item p {
-  font-size: 0.95rem;
-  color: #444;
+.project-card img:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 25px rgba(0,0,0,0.15);
 }
 
 
@@ -165,7 +171,6 @@ footer .footer-bottom p {
     grid-template-columns: repeat(4, 1fr);
   }
 }
-
 
 /********Projekterside*******/
 .projects-intro {
@@ -619,6 +624,103 @@ body {
   width: 100%;
 }
 
+/*********Emergency*******/
+
+.emergency {
+  padding: 40px 20px;
+}
+
+/* INTRO */
+.emergency-intro {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.emergency-intro h1 {
+  font-size: 2rem;
+  margin-bottom: 15px;
+}
+
+.emergency-intro p {
+  max-width: 650px;
+  margin: 0 auto 25px;
+}
+
+.emergency-link {
+  display: inline-block;
+  padding: 12px 26px;
+  background-color: #BF0404;
+  color: white;
+  border-radius: 30px;
+  text-decoration: none;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.emergency-link:hover {
+  background-color: #333;
+  transform: scale(1.05);
+}
+
+/* grids mobilfirst*/
+.emergency-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 30px;
+  justify-items: center;
+}
+
+
+.emergency-card {
+  background-color: white;
+  padding: 20px;
+  border-radius: 18px;
+  text-align: center;
+  max-width: 320px;
+  width: 100%;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.emergency-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 14px 30px rgba(0,0,0,0.15);
+}
+
+
+.emergency-card img {
+  width: 100%;
+  max-width: 260px;
+  height: auto;               
+  display: block;
+  margin: 0 auto 15px;
+  border-radius: 14px;
+  transition: transform 0.3s;
+}
+
+.emergency-card img:hover {
+  transform: scale(1.05);
+}
+
+
+.emergency-card h2 {
+  font-size: 1.2rem;
+  margin-bottom: 8px;
+}
+
+.emergency-card p {
+  font-size: 0.95rem;
+  color: #444;
+}
+
+
+
+/******DESKTOP******/
+@media (min-width: 1000px) {
+  .emergency-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+
 
 
 
@@ -635,7 +737,7 @@ body {
   }
 }
 
-/* GLOBAL LINK RESET */
+/*******linksfarve******/
 a {
   color: red;
   text-decoration: none;
@@ -643,6 +745,8 @@ a {
 a:hover {
   opacity: 0.7;
 }
+
+
 
 
 
