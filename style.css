@@ -74,75 +74,105 @@ footer .footer-bottom p {
 }
 
 
-/*********Projekt1***************/
-.projekt-hero {
-  padding: 80px 10%;
+/********PROJEKT1*********/
+
+/* INTRO */
+.project1-intro {
   text-align: center;
+  margin-bottom: 60px;
 }
 
-.projekt-link {
+.project1-intro h1 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.project1-intro p {
+  max-width: 650px;
+  margin: 0 auto 25px;
+}
+
+.project1-link {
   display: inline-block;
-  margin-top: 20px;
-  color: #BF0404;
+  padding: 12px 26px;
+  background-color: rgb(197, 44, 44);
+  color: white;
   text-decoration: none;
+  border-radius: 25px;
+  transition: background-color 0.3s;
 }
 
-.projekt-info {
+.project1-link:hover {
+  background-color: #333;
+}
+
+/* GRID – mobil first */
+.project1-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 40px;
-  padding: 60px 10%;
-  background-color: #c43333;
-  color: #ffffff;
+  grid-template-columns: 1fr;
+  gap: 30px;
+  justify-items: center;
 }
 
-.projekt-visualer {
-  padding: 60px 10%;
-}
-
-.billede-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
-}
-
-.billede-grid img {
+/* INDIVIDUELLE ITEMS */
+.project1-item {
+  background-color: white;
+  padding: 20px;
+  border-radius: 16px;
+  text-align: center;
+  max-width: 300px;
   width: 100%;
-  height: auto;
+  transition: transform 0.3s, box-shadow 0.3s;
 }
 
-.projekt-tekst {
-  padding: 60px 10%;
-  max-width: 800px;
+.project1-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 25px rgba(0,0,0,0.15);
 }
 
-/****** Projekt-preview styling ******/
-
-.project-card a {
-  text-decoration: none;
-  color: #262626;
+/* BILLEDER – ens bredde, højde tilpasses */
+.project1-item img {
+  width: 100%;
+  max-width: 260px;  /* alle billeder maks samme bredde */
+  height: auto;       /* proportioner bevares */
+  border-radius: 12px;
+  margin-bottom: 15px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  transition: transform 0.3s, box-shadow 0.3s;
 }
 
-.project-card img {
-  border-radius: 6px;
-  margin-bottom: 0.8rem;
+.project1-item img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
 }
 
-.project-card h3 {
-  color: #BF0404;
-  margin-bottom: 0.4rem;
+/* TEKST */
+.project1-item h2 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
 }
 
-.project-card p {
-  font-size: 0.9rem;
-}
-.project-card {
-  transition: transform 0.3s ease;
+.project1-item p {
+  font-size: 0.95rem;
+  color: #444;
 }
 
-.project-card:hover {
-  transform: translateY(-4px);
+/* TABLET */
+@media (min-width: 700px) {
+  .project1-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
+
+/* DESKTOP */
+@media (min-width: 1000px) {
+  .project1-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
 
 /********Projekterside*******/
 .projects-intro {
@@ -151,8 +181,7 @@ footer .footer-bottom p {
 }
 
 .projects-intro h1 {
-  margin-bottom: 1.5rem;   /* mere luft */
-  opacity: 0;
+  margin-bottom: 1.5rem;  
   filter: blur(4px);
   animation: fadeClear 1s ease forwards;
 }
@@ -166,7 +195,7 @@ footer .footer-bottom p {
   margin: 0 auto;
 }
 
-/* NY animation */
+
 @keyframes fadeClear {
   to {
     opacity: 1;
@@ -175,14 +204,14 @@ footer .footer-bottom p {
 }
 
 
-/* Grid med billeder */
+/********Grid med billeder*********/
 .projects-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Flere kolonner der passer til skærm */
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 30px;
 }
 
-/* Enkel projekt-box */
+
 .project-item {
   text-decoration: none;
   color: #333;
@@ -204,7 +233,7 @@ footer .footer-bottom p {
 .project-item h3 {
   margin-top: 10px;
   font-size: 18px;
-  color: #ff3366; /* Kan skiftes til din accentfarve */
+  color: #ff3366; 
 }
 .project-item {
   display: flex;
@@ -247,13 +276,13 @@ footer .footer-bottom p {
   transition: transform 0.6s ease, filter 0.6s ease;
 }
 
-/* NY HOVER-EFFEKT (rolig & eksamensvenlig) */
+/*******HOVER-EFFEKT ********/
 .about-image:hover img {
   transform: scale(1.05) translateY(-5px);
   filter: grayscale(40%);
 }
 
-/* TEKST */
+
 .about-text h1 {
   font-size: 2.5rem;
   margin-bottom: 1.5rem;
@@ -270,7 +299,7 @@ footer .footer-bottom p {
   margin-top: 0.5rem;
 }
 
-/* SOCIALE LINKS */
+/******links*******/
 .social-links {
   margin-top: 6rem;
   display: flex;
@@ -420,7 +449,7 @@ footer .footer-bottom p {
 
 
 /***********Projekt5********/
-/* GENERELT */
+
 body {
   font-family: Arial, sans-serif;
   line-height: 1.6;
@@ -430,11 +459,11 @@ body {
   color: #222;
 }
 
-/* TEMA 6 SEKTIONSSTYLING */
+
 .tema-section {
   max-width: 800px;
   margin: 0 auto 5rem auto;
-  text-align: center; /* CENTRER ALT INDHOLD */
+  text-align: center; 
   padding: 0 1rem;
 }
 
@@ -448,7 +477,7 @@ body {
   margin-top: 1rem;
 }
 
-/* BILLEDE-HOVER EFFEKT */
+
 .tema-section img {
   width: 100%;
   border-radius: 12px;
@@ -462,7 +491,7 @@ body {
   filter: brightness(100%) contrast(100%);
 }
 
-/* LINK UNDERLINE-ANIMATION */
+
 .doc-link {
   display: inline-block;
   margin-top: 1.5rem;
@@ -487,7 +516,7 @@ body {
 }
 
 
-/* MOBIL-RESPONSIVE */
+
 @media (max-width: 768px) {
   .tema-section h2 {
     font-size: 1.2rem;
@@ -499,7 +528,7 @@ body {
 }
 
 
-/* BASIS */
+
 body {
   font-family: 'Arial', sans-serif;
   line-height: 1.6;
@@ -509,25 +538,25 @@ body {
   color: #222;
 }
 
-/* TEMA 5 SEKTIONER MED BAGGRUNDSFARVE STRIPE */
+
 .tema-section {
   max-width: 800px;
   margin: 0 auto 5rem auto;
   padding: 2rem 1rem;
   text-align: center;
-  border-left: 6px solid #BF0404; /* ny visuel stripe til Tema 5 */
+  border-left: 6px solid #BF0404; 
   background-color: #f9f9f9;
   border-radius: 8px;
 }
 
-/* OVERSKRIFTER */
+
 .tema-section h1, .tema-section h2 {
   margin-bottom: 1rem;
   text-align: center;
   font-family: 'Verdana', sans-serif;
 }
 
-/* BILLEDE HOVER – ROTATION + SHADOW */
+
 .tema-section img {
   width: 100%;
   border-radius: 12px;
@@ -541,7 +570,7 @@ body {
   box-shadow: 0 8px 20px rgba(0,0,0,0.2);
 }
 
-/* BEFORE / AFTER FLEX MED BORDER OG SHADOW */
+
 .before-after-container {
   display: flex;
   gap: 2rem;
@@ -558,8 +587,8 @@ body {
 
 .before-after-container img {
   width: 100%;
-  height: 300px; /* fast højde */
-  object-fit: cover; /* sørger for at billedet fylder uden at forvrænge */
+  height: 300px; 
+  object-fit: cover; 
   border-radius: 12px;
   border: 2px solid #8e1010;
   box-shadow: 0 4px 10px rgba(0,0,0,0.1);
@@ -572,7 +601,7 @@ body {
   box-shadow: 0 8px 15px rgba(0,0,0,0.2);
 }
 
-/* LINK UNDERLINE EFFEKT (NY STYLE) */
+
 .doc-link {
   display: inline-block;
   margin-top: 1rem;
@@ -597,10 +626,10 @@ body {
   width: 100%;
 }
 
-/* FADE-IN MED ROTATION */
 
 
-/* MOBILRESPONSIVE */
+
+/********MOBILRESPONSIVE********/
 @media (max-width: 768px) {
   .before-after-container {
     flex-direction: column;
@@ -613,7 +642,15 @@ body {
   }
 }
 
-/**********Emergency*******/
+/* GLOBAL LINK RESET */
+a {
+  color: red;
+  text-decoration: none;
+}
+a:hover {
+  opacity: 0.7;
+}
+
 
 
 
